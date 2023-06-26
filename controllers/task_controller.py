@@ -70,7 +70,7 @@ class TaskController:
                 reply_message = "Неверный номер задачи."
 
             self.bot.reply_to(message, reply_message)
-        except Exception as e:
+        except Exception :
             self.bot.reply_to(message, "Введите правильно например как тут \n /delete 1 ")
 
     def handle_mark_on_done(self, message):
@@ -90,5 +90,5 @@ class TaskController:
                 reply_message = "Неверный номер задачи."
 
             self.bot.reply_to(message, reply_message)
-        except Exception as e:
-            self.bot.reply_to(message, f"Произошла ошибка: {str(e)}")
+        except Exception :
+            self.bot.reply_to(message, "Введите правильно например как тут \n /done 1 ")

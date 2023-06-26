@@ -10,5 +10,8 @@ COPY . /app
 # Устанавливаем зависимости проекта
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Инициализируем Alembic и перемещаем alembic.ini внутрь папки alembic
+RUN alembic init alembic && mv alembic.ini alembic/alembic.ini
+
 # Указываем команду, которая будет выполняться при запуске контейнера
 CMD [ "python", "main.py" ]

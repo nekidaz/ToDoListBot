@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 
 from bot.bot import TaskBot
 from db.connectToDB import get_database_url
-
 load_dotenv()
 
 if __name__ == "__main__":
