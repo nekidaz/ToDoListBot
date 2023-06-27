@@ -12,6 +12,7 @@ class TaskBot:
 
     def start(self):
         self.controller.register_handlers()
+
         self.bot.polling()
 
     def close(self):
